@@ -1,0 +1,14 @@
+$colors-map: (
+  blue: #0e6cff,
+  orange: #ff8700,
+  green: #4caf50,
+ 
+);
+
+@each $color-name, $color-value in $colors-map {
+  .btn-#{$color-name} {
+    background-color: $color-value;
+border: none;
+width: 30%;}
+
+}

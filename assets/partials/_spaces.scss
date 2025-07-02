@@ -1,0 +1,79 @@
+// mappa delle grandezze da ciclare
+
+$sizes-map: (
+  sm: 1rem,
+  normal: 1.5rem,
+  md: 2rem,
+  lg: 3rem,
+  xl: 4rem,
+  xxl: 5rem,
+);
+
+// Con EACH prendo tutti i valori della mia mappa e li assegno a tutti i padding che mi servono
+
+@each $name, $value in $sizes-map {
+  .p-#{$name} {
+   padding: $value;
+  }
+}
+@each $name, $value in $sizes-map {
+  .pl-#{$name} {
+   padding-left: $value;
+  }
+}
+@each $name, $value in $sizes-map {
+  .pr-#{$name} {
+   padding-right: $value;
+  }
+}
+@each $name, $value in $sizes-map {
+  .pb-#{$name} {
+   padding-bottom: $value;
+  }
+}
+@each $name, $value in $sizes-map {
+  .pt-#{$name} {
+   padding-top: $value;
+  }
+}
+@each $name, $value in $sizes-map {
+  .px-#{$name} {
+   padding-left: $value;
+   padding-right: $value;
+  }
+}
+@each $name, $value in $sizes-map {
+  .py-#{$name} {
+   padding-top: $value;
+   padding-bottom: $value;
+  }
+}
+
+// faccio la stessa cosa coi margin
+
+@each $name, $value in $sizes-map {
+  .m-#{$name} {
+  margin: $value;
+  }
+  .mt-#{$name} {
+  margin-top: $value;
+  }
+  .ml-#{$name} {
+  margin-left: $value;
+  }
+  .mb-#{$name} {
+  margin-bottom: $value;
+  }
+  .mr-#{$name} {
+  margin-right: $value;
+  }
+  .mx-#{$name} {
+  margin-right: $value;
+  margin-left: $value;
+  }
+  .my-#{$name} {
+  margin-top: $value;
+  margin-bottom: $value;
+  }
+
+}

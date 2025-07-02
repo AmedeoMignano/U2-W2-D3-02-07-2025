@@ -1,0 +1,44 @@
+@import '../partials/reset';
+@import '../partials/colors';
+@import '../partials/font';
+@import '../partials/mixins';
+@import '../partials/spaces';
+@import '../partials/buttons';
+@import '../partials/animations';
+
+nav{
+    @include flex-sb
+    } ul {
+        @include flex-sb
+    }
+        li {
+
+        }
+            a{ text-decoration: none}
+
+h1{
+    @include title-big
+}
+.bg-hero{
+    @include flex-center
+}
+.text{
+    flex-grow: 1;
+}
+.art{
+   @include grid(2)
+}
+.art img {
+    width: 600px;
+    height: 405px;
+}
+.hero-img {
+  @include floating(15px, 0 8px 20px rgba(0, 0, 0, 0.4), 2px solid #f4f4f4);
+}
+.grid-img {
+  @include floating(10px, 0 2px 5px rgba(0, 0, 0, 0.2));
+}
+
+.bg-hero {
+  @include animation(fadeSlideHero, 1s, 0, 30px, 0.2s);
+}

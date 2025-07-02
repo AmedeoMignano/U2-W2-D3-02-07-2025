@@ -1,0 +1,52 @@
+@mixin title-big {
+  font-size: $fs-xxl ;
+}
+
+@mixin flex-sb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin floating($radius: 10px, $shadow: 0 4px 10px rgba(0, 0, 0, 0.3), $border: none) {
+  border-radius: $radius;
+  box-shadow: $shadow;
+  border: $border;
+}
+
+@mixin grid($elements-per-row: 3) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  > * {
+    width: calc(100% / $elements-per-row - 2rem);
+    margin: 1rem;
+  }
+}
+
+@mixin animation(
+  $name,
+  $duration: 1s,
+  $start: 0,
+  $end: 20px,
+  $delay: 0s
+) {
+  animation: #{$name} $duration ease-out $delay both;
+
+  @keyframes #{$name} {
+    from {
+      opacity: 0;
+      transform: translateY(-#{$end});
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
